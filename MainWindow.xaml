@@ -1,0 +1,14 @@
+﻿<Window x:Class="WpfReactiveUIExample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="164" Width="180">
+    <Grid Margin="6">
+        <StackPanel>
+            <TextBox Text="{Binding AmountA, UpdateSourceTrigger=PropertyChanged}" Height="23" TextWrapping="Wrap" Width="120"/>
+            <TextBox Text="{Binding AmountB, UpdateSourceTrigger=PropertyChanged}" Height="23" TextWrapping="Wrap" Width="120"/>
+            <TextBox Text="{Binding AmountC, UpdateSourceTrigger=PropertyChanged}" Height="23" TextWrapping="Wrap" Width="120"/>
+            <TextBlock Text="{Binding Total, UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" Height="20" Width="120"/>
+            <Button Content="Button" Command="{Binding OkCommand}" Width="75"/>
+        </StackPanel>
+    </Grid>
+</Window>
